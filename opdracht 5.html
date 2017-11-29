@@ -8,23 +8,23 @@
     var robotArm = new RobotArm(canvas);
 
     // Het level inladen
-    robotArm.loadLevel("exercise 11");
+    robotArm.loadLevel("exercise 6");
 
     // De door jou opgegeven instructies uitvoeren
     robotArm.run();
-    var d = 9;
-    for (a = 0; a < 5; a++, d--) {
+
+
+    for (i = 0; i < 8; i++) {
+        robotArm.moveRight();
+    }
+    for (h = 0; h < 8; h++){
+        robotArm.moveLeft();
         robotArm.grab();
-        for (b = 0; b < d; b++) {
-            robotArm.moveRight();
-        }
+        robotArm.moveRight();
         robotArm.drop();
-        d--;
-        for (c = 0; c < d; c++) {
-            robotArm.moveLeft();
-        }
+        robotArm.moveLeft();
     }
 
 </script>
-</body>W
+</body>
 </html>
